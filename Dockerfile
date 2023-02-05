@@ -1,5 +1,7 @@
 FROM surrealdb/surrealdb:latest
 
+RUN curl -sSf https://install.surrealdb.com | sh
+
 EXPOSE 8000
 
-CMD ["surreal", "start", "--log", "trace", "file://~/surrealdb"]
+CMD ["start"]
